@@ -1,0 +1,10 @@
+language: java
+sudo: false
+jdk:
+  - oraclejdk8
+script: mvn clean package
+notifications:
+  email:
+    recipients:
+      - dominique.righetto@gmail.com
+    on_failure: always
