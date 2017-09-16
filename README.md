@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/righettod/virtualhost-payload-generator.svg?branch=master)](https://travis-ci.org/righettod/virtualhost-payload-generator)
+[![Coverity Status](https://scan.coverity.com/projects/13781/badge.svg)](https://scan.coverity.com/projects/righettod-virtualhost-payload-generator)
+
 # Virtual Host Payload Generator
 
 Burp extension providing a set of values for the HTTP request **Host** header for the *Burp Intruder* in order to abuse virtual host resolution.

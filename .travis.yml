@@ -2,17 +2,19 @@ language: java
 sudo: false
 jdk:
   - oraclejdk8
-script: mvn clean package
+script: mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
 notifications:
   email:
     recipients:
       - dominique.righetto@gmail.com
     on_failure: always
 addons:
+  sonarcloud:
+    organisation: "righettod-github"
   coverity_scan:
     project:
       name: "righettod/virtualhost-payload-generator"
       description: "Trigger via TravisCI"
     notification_email: dominique.righetto@gmail.com
     build_command: mvn clean package
-    branch_pattern: master    
+    branch_pattern: master
