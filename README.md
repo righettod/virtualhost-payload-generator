@@ -31,13 +31,12 @@ You will see the different responses code, content and size according to the **H
 
 # Payloads
 
-Payload are stored in the properties file named **virtualhost-payload-generator-config.properties**, precisely in the following keys:
+Payload are stored in the properties file named **virtualhost-payload-generator-config.properties**, precisely in the following key:
 
 ```
 # List (separated by a comma) of the host names to use
-host.header.names=localhost,127.0.0.1,intranet,proxy
-# List (separated by a comma) of the host ports to use
-host.header.ports=80,81,8080,9090,9080
+# Ports list will be generated from 1 -> 65535
+host.header.names=localhost,127.0.0.1,intranet,proxy,mail,exchange,ad,fw,reverse-proxy
 ```
 
 # Build the extension

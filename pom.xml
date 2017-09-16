@@ -26,5 +26,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sonar.exclusions>burp/**/*</sonar.exclusions>
     </properties>
 </project>

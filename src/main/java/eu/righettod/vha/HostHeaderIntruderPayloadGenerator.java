@@ -73,18 +73,15 @@ public class HostHeaderIntruderPayloadGenerator implements IIntruderPayloadGener
     private List<String> buildHostTestList() {
         final List<String> values = new ArrayList<>();
 
-        //Get the list of host names and ports
+        //Get the list of host names
         List<String> names = Arrays.asList(this.cfg.getString("host.header.names").split(","));
-        List<String> ports = Arrays.asList(this.cfg.getString("host.header.ports").split(","));
 
         //Build the combination list
         names.forEach(n -> {
             if (n != null && !n.trim().isEmpty()) {
-                ports.forEach(p -> {
-                    if (p != null && !p.trim().isEmpty()) {
-                        values.add(n + ":" + p);
-                    }
-                });
+                for (int p = 1; p <= 65535; p++) {
+                    values.add(n + ":" + p);
+                }
             }
         });
 
