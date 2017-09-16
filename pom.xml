@@ -6,7 +6,7 @@
 
     <groupId>eu.righettod</groupId>
     <artifactId>virtualhost-payload-generator</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <description>BURP extension providing a set of values for the HTTP request "Host" header for the "BURP Intruder" in order to abuse virtual host resolution.</description>
 
     <build>
