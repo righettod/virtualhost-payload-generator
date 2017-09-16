@@ -8,3 +8,11 @@ notifications:
     recipients:
       - dominique.righetto@gmail.com
     on_failure: always
+addons:
+  coverity_scan:
+    project:
+      name: "righettod/virtualhost-payload-generator"
+      description: "Trigger via TravisCI"
+    notification_email: dominique.righetto@gmail.com
+    build_command: mvn clean package
+    branch_pattern: master    
