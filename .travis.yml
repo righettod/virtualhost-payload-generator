@@ -2,16 +2,13 @@ language: java
 sudo: false
 jdk:
   - oraclejdk8
-script: mvn -X clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+script: mvn clean package
 notifications:
   email:
     recipients:
       - dominique.righetto@gmail.com
     on_failure: always
 addons:
-  sonarcloud:
-    organisation: "righettod-github"
-    token: $SONAR_TOKEN
   coverity_scan:
     project:
       name: "righettod/virtualhost-payload-generator"
