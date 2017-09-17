@@ -9,6 +9,7 @@ notifications:
       - dominique.righetto@gmail.com
     on_failure: always
 addons:
+  srcclr: true
   coverity_scan:
     project:
       name: "righettod/virtualhost-payload-generator"
